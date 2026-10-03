@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#3f51b5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="العداد">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+</head>
+
+<body>
+    <div class="card">
+    <button id="infoBtn" class="info-btn" onclick="openModal()">i</button>
+    <div id="counter" class="number">0</div>
+
+    <div id="alertText" class="alert hidden">تم الوصول للحد الأقصى 150 شخص </div>
+
+    <div id="controls">
+        <button class="btn btn-sub" onclick="decrement()">-</button>
+        <button class="btn btn-add" onclick="increment()">+</button>
+    </div>
+
+    <button id="restartBtn" class="btn btn-restart hidden" onclick="reset()">Restart</button>
+    <div id="developerModal" class="Modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>عن التطبيق</h3>
+            <p class="dev-credits">طوّر بواسطة</p>
+            <h2 class="dev-name">SAMIR KHASHO</h2>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator){
+            window.addEventListener('load' , () => {
+                navigator.serviceWorker.register('./sw.js')
+                 .then((reg) => console.log('تم تسجيل Service Worker بنجاح :' , reg.scope))
+                 .catch((err) => console.log('فشل تسجيل Service Worker:', err));
+            })
+        }
+    </script>
+
+</body>
+</html>
+
+
+

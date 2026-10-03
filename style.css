@@ -1,0 +1,143 @@
+body{
+    font-family: system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f5f7;
+}
+
+.card{
+    position: relative;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+}
+
+.number{
+    font-size: 80px;
+    font-weight: bold;
+    color: #3f51b5;
+    margin: 20px 0;
+}
+
+.number.limit{
+    color: #e53935;
+}
+
+.btn{
+    font-size: 24px;
+    padding: 12px 24px;
+    margin: 8px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.1s ease;
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+.btn-add{
+    background-color: #3f51b5;
+}
+.btn-sub{
+    background-color: #e53935;
+}
+.btn-restart{
+    background-color: #4caf50;
+    font-size: 18px;
+    width: 100%;
+}
+
+.hidden{
+    display: none;
+}   
+
+.alert{
+    color: #e53935;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.info-btn{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-family: serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.info-btn:hover{
+    background-color: #d0d0d0;
+}
+
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+}
+
+.modal-content{
+    background-color: white;
+    padding: 25px 20px ;
+    border-radius: 15px;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+.close-btn{
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    color: #000;
+}
+
+.dev-credits{
+    margin: 10px 0 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.dev-name{
+    margin: 0;
+    color: #3f51b5;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
